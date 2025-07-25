@@ -1,0 +1,19 @@
+#!/bin/bash
+# Update the system
+yum update -y
+
+# Install Apache (httpd) and PHP
+yum install -y httpd php
+
+# Start Apache service and enable it to run on boot
+systemctl start httpd
+systemctl enable httpd
+
+# Add a simple PHP file to test
+echo "<?php phpinfo(); ?>" > /var/www/html/index.php
+
+# Adjust firewall if needed (optional)
+# Amazon Linux AMI does not use firewalld by default, so skip unless using CentOS or RHEL
+
+# Confirm Apache is running
+systemctl status httpd
