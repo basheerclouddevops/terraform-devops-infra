@@ -1,24 +1,9 @@
-variable "region" {
-  description = "AWS region"
-  default     = "us-east-1"
-}
+variable "region" {}
 
-variable "instance_type" {
-  description = "EC2 instance type"
-  default     = "t2.micro"
-}
+variable "instance_type" {}
 
-variable "ami_id" {
-  description = "AMI ID for EC2 instance"
-  type        = string
-}
+variable "ami_id" {}
 
-variable "key_name" {
-  description = "SSH key name"
-  type        = string
-}
+variable "key_name" {}
 
-variable "subnet_id" {
-  description = "Subnet to launch EC2"
-  type        = string
-}
+variable "subnet_id" {}

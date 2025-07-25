@@ -12,8 +12,6 @@ systemctl enable httpd
 # Add a simple PHP file to test
 echo "<?php phpinfo(); ?>" > /var/www/html/index.php
 
-# Adjust firewall if needed (optional)
-# Amazon Linux AMI does not use firewalld by default, so skip unless using CentOS or RHEL
 
 # Confirm Apache is running
 systemctl status httpd
